@@ -11,7 +11,7 @@
 
     function copyScript(file) {
         const name = file.split('/')[2];
-        const text = `if(-not (Test-Path -Path  \"$env:USERPROFILE\\${name}\")){Invoke-WebRequest -Uri \"https://v.theludde235.se/assets/${name}\" -OutFile \"$env:USERPROFILE\\${name}\";}Set-ItemProperty -Path \"HKCU:\\AppEvents\\Schemes\\Apps\\.Default\\Open\\.Current\" -Name \"(Default)\" -Type \"String\" -Value \"$env:USERPROFILE\\${file}\";`;
+        const text = `if(-not (Test-Path -Path  \"$env:USERPROFILE\\${name}\")){Invoke-WebRequest -Uri \"https://v.theludde235.se/assets/${name}\" -OutFile \"$env:USERPROFILE\\${name}\";}Set-ItemProperty -Path \"HKCU:\\AppEvents\\Schemes\\Apps\\.Default\\Open\\.Current\" -Name \"(Default)\" -Type \"String\" -Value \"$env:USERPROFILE\\${name}\";`;
         navigator.clipboard.writeText(text);
     }
   
