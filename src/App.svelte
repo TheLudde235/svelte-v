@@ -9,6 +9,18 @@
         });
     }
 
+    function copyScript(file) {
+        const name = file.split('/')[2];
+        const text = `if(-not (Test-Path -Path  \"$env:USERPROFILE\\${name}\")){Invoke-WebRequest -Uri \"https://v.theludde235.com/assets/${name}\" -OutFile \"$env:USERPROFILE\\${name}\";}Set-ItemProperty -Path \"HKCU:\\AppEvents\\Schemes\\Apps\\.Default\\Open\\.Current\" -Name \"(Default)\" -Type \"String\" -Value \"$env:USERPROFILE\\${file}\";`;
+        navigator.clipboard.writeText(text);
+    }
+  
+//   document.querySelector('a:not(.sound)').addEventListener('click', () => {
+//     const text = document.querySelector('input').value;
+//     navigator.clipboard.writeText(
+//       `C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe -noexit -ExecutionPolicy Bypass "Add-Type -AssemblyName System.Windows.Forms;[System.Windows.Forms.MessageBox]::Show('${text}');"`
+//     );
+//   });
 </script>
 
 <main>
@@ -18,7 +30,7 @@
     <div class="funny">
         <p>{funny.split('/')[2]}</p>
         <audio src="{funny}" controls></audio> <br>
-        <a href="#">copy open-program script (ps1)</a>
+        <a href="#" on:click={copyScript(funny)}>copy open-program script (ps1)</a>
         <hr>
     </div>
     {/each}
