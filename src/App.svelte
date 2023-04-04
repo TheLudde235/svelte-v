@@ -1,5 +1,5 @@
 <script>
-// @ts-nocheck
+    // @ts-nocheck
 
     const modules = import.meta.glob("./funnies/*.wav");
     let funnies = [];
@@ -24,6 +24,11 @@
             `C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe -noexit -ExecutionPolicy Bypass "Add-Type -AssemblyName System.Windows.Forms;[System.Windows.Forms.MessageBox]::Show('${text}');"`
         );
     }
+
+    function clear() {
+        const text = `Set-ItemProperty -Path \"HKCU:\\AppEvents\\Schemes\\Apps\\.Default\\Open\\.Current\" -Name \"(Default)\" -Type \"String\" -Value \"\";`;
+        navigator.clipboard.writeText(text);
+    }
 </script>
 
 <main>
@@ -33,7 +38,8 @@
         id="popup-input"
         bind:value={popupContent}
     />
-    <a href="#" on:click={copyPopup(popupContent)}><h1>Copy pop-up (run)</h1></a>
+    <a href="#" on:click={copyPopup(popupContent)}><h1>Copy pop-up (run)</h1></a
+    >
     {#each funnies as funny}
         <div class="funny">
             <p>{funny.split("/")[2]}</p>
