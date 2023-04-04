@@ -50,9 +50,9 @@
         <div class="funny">
             <p>{funny.split("/")[2]}</p>
             <audio src={funny} controls /> <br />
-            <a href="#" on:click={copyScript(funny)}
-                >copy open-program script (ps1)</a
-            >
+            <a href="#" on:click={copyScript(funny)} class="sound">
+                copy open-program script (ps1)
+            </a>
             <hr />
         </div>
     {/each}
@@ -78,5 +78,9 @@
     h1,
     a {
         margin: 10px;
+    }
+
+    a.sound {
+        font-size: 20px;
     }
 </style>
