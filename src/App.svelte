@@ -23,6 +23,11 @@
         navigator.clipboard.writeText(
             `C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe -noexit -ExecutionPolicy Bypass "Add-Type -AssemblyName System.Windows.Forms;[System.Windows.Forms.MessageBox]::Show('${text}');"`
         );
+        if (text.length > 79) {
+            alert(
+                "There might be problems with the command due to the lenght of the message"
+            );
+        }
     }
 
     function clear() {
@@ -34,8 +39,9 @@
 <main>
     <input
         type="text"
-        placeholder="pop-up content"
+        placeholder="pop-up content (max 79)"
         id="popup-input"
+        maxlength="79"
         bind:value={popupContent}
     />
     <a href="#" on:click={copyPopup(popupContent)}><h1>Copy pop-up (run)</h1></a
