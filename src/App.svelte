@@ -1,9 +1,14 @@
 <script>
     const modules = import.meta.glob('./funnies/*.wav');
-    const funnies = [];
+    let funnies = [];
+    
     for (const path in modules) {
-        funnies.push(path)
+        modules[path]().then(m => {
+            console.log(m.default)
+            funnies = [...funnies, m.default];
+        });
     }
+
 </script>
 
 <main>
@@ -12,7 +17,7 @@
     {#each funnies as funny}
     <div class="funny">
         <p>{funny.split('/')[2]}</p>
-        <audio src="/src/{funny}" controls></audio> <br>
+        <audio src="{funny}" controls></audio> <br>
         <a href="#">copy open-program script (ps1)</a>
         <hr>
     </div>
