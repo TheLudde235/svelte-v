@@ -1,6 +1,7 @@
-# What is svelte-v?
+# What is v?
 
-v was made to prank my classmates and colleagues quickly. But after I realized free hosting was way too slow I rebuilt the app from a NodeJS app to a svelte app. (node version still live [here](https://v-2unu.onrender.com/) but is very slow).
+v was made to prank my classmates for when they left their computer unnatended and I wanted to quickly prank them by setting a sound for when a new program is started. (inspired by [this](https://www.youtube.com/shorts/usAOiprtEs4) video by Veraxity)
+
 
 The files were static in the original v project so this didn't really make a difference.
 
@@ -8,7 +9,7 @@ The files were static in the original v project so this didn't really make a dif
 
 If you'd like to add you're own sounds that you think many people will enjoy, send them through a pr in the [`/src/funnies`](https://github.com/TheLudde235/svelte-v/tree/master/src/funnies) folder. Note that the format needs to be in the `.wav` file-format.
 
-To convert `.mp3` to `.wav` [cloudconvert.com](https://cloudconvert.com/mp3-to-wav) works for great for me.
+To convert other formats to `.wav` [cloudconvert.com](https://cloudconvert.com/mp3-to-wav) works for great for me.
 
 ## Hosting
 
