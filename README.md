@@ -4,14 +4,12 @@ v was made to prank my classmates and colleagues quickly. But after I realized f
 
 The files were static in the original v project so this didn't really make a difference.
 
----
 ## Uploading sounds
 
 If you'd like to add you're own sounds that you think many people will enjoy, send them through a pr in the `/src/funnies` folder. Note that the format needs to be in the `.wav` file-format.
 
 To convert `.mp3` to `.wav` [cloudconvert.com](https://cloudconvert.com/mp3-to-wav) works for great for me.
 
----
 ## Hosting
 
 The website is hosted [here](https://v.theludde235.se/) on cloudflare pages.
