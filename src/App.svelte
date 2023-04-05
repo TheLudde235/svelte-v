@@ -37,6 +37,18 @@
 </script>
 
 <main>
+    <div class="info-container">
+        <div>
+            <a
+                href="https://github.com/TheLudde235/svelte-v/blob/master/README.md"
+                >What is this?</a
+            >
+            <a
+                href="https://github.com/TheLudde235/svelte-v/blob/master/Manual.md"
+                >How do I use it?</a
+            >
+        </div>
+    </div>
     <input
         type="text"
         placeholder="pop-up content (max 79)"
@@ -82,5 +94,12 @@
 
     a.sound {
         font-size: 20px;
+    }
+
+    .info-container {
+        display: flex;
+    }
+    .info-container div {
+        margin-left: auto;
     }
 </style>
