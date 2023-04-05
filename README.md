@@ -1,6 +1,6 @@
 # What is svelte-v?
 
-v was made to prank my classmates quickly. But after I realized free hosting was way too slow I rebuilt the app from a NodeJS app to a svelte app. (node version still live [here](https://v-2unu.onrender.com/) but is very slow).
+v was made to prank my classmates and colleagues quickly. But after I realized free hosting was way too slow I rebuilt the app from a NodeJS app to a svelte app. (node version still live [here](https://v-2unu.onrender.com/) but is very slow).
 
 The files were static in the original v project so this didn't really make a difference.
 
