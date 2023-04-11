@@ -69,7 +69,7 @@
         </div>
     {/each}
 
-    <a href="#">Clear</a>
+    <a href="#" on:click={clear()}>Clear</a>
 </main>
 
 <style>
