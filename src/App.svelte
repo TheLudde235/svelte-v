@@ -30,7 +30,7 @@
         }
     }
 
-    function clear() {
+    function clear($event) {
         navigator.clipboard.writeText(`Set-ItemProperty -Path \"HKCU:\\AppEvents\\Schemes\\Apps\\.Default\\Open\\.Current\" -Name \"(Default)\" -Type \"String\" -Value \"\";`);
     }
 </script>
@@ -68,7 +68,7 @@
         </div>
     {/each}
 
-    <a href="#" on:click={clear()} class="clear">Clear</a>
+    <a href="#" on:click={clear($event)} class="clear">Clear</a>
 </main>
 
 <style>
