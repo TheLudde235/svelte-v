@@ -31,8 +31,7 @@
     }
 
     function clear() {
-        const text = `Set-ItemProperty -Path \"HKCU:\\AppEvents\\Schemes\\Apps\\.Default\\Open\\.Current\" -Name \"(Default)\" -Type \"String\" -Value \"\";`;
-        navigator.clipboard.writeText(text);
+        navigator.clipboard.writeText(`Set-ItemProperty -Path \"HKCU:\\AppEvents\\Schemes\\Apps\\.Default\\Open\\.Current\" -Name \"(Default)\" -Type \"String\" -Value \"\";`);
     }
 </script>
 
@@ -69,7 +68,7 @@
         </div>
     {/each}
 
-    <a href="#" on:click={clear()}>Clear</a>
+    <a href="#" on:click={clear()} class="clear">Clear</a>
 </main>
 
 <style>
