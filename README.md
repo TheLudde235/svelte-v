@@ -3,7 +3,7 @@
 v was made to prank my classmates for when they left their computer unnatended and I wanted to quickly prank them by setting a sound for when a new program is started. (inspired by [this](https://www.youtube.com/shorts/usAOiprtEs4) video by Veraxity)
 
 
-The files were static in the original v project so this didn't really make a difference when "translating" it to svelte/frontend.
+The files were static in the original v project so this didn't really make a difference when "translating" it to svelte.
 
 ## Uploading sounds
 
